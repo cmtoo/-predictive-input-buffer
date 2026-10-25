@@ -2466,6 +2466,10 @@ namespace {
             s->earlySum += t;
             ++s->savesAt[pct];
           }
+                // v2.56: a ding for every real save (training mode shows its hint instead)
+        if (buf.saveDing && !buf.train) {
+            FMODAudioEngine::sharedEngine()->playEffect("counter003.ogg");
+         }  
         }
 
     std::string attemptSummary() {
