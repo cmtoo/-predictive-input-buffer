@@ -2466,10 +2466,6 @@ namespace {
             s->earlySum += t;
             ++s->savesAt[pct];
           }
-                // v2.56: a ding for every real save (training mode shows its hint instead)
-        if (buf.saveDing && !buf.train) {
-            FMODAudioEngine::sharedEngine()->playEffect("counter003.ogg");
-         }  
         }
 
     std::string attemptSummary() {
@@ -3649,18 +3645,6 @@ class $modify(BufEndLevelLayer, EndLevelLayer) {
 };
 
 class $modify(BufPauseLayer, PauseLayer) {
-    void customSetup() {
-        PauseLayer::customSetup();
-        auto* sprite = ButtonSprite::create("Buffer", "bigFont.fnt", BufferMenu::currentTheme().button, 0.8f);
-        sprite->setScale(0.6f);
-        auto* button = CCMenuItemSpriteExtra::create(sprite, this, menu_selector(BufPauseLayer::onBufferMenu));
-        auto* menu = CCMenu::create();
-        menu->addChild(button);
-        auto win = CCDirector::get()->getWinSize();
-        menu->setPosition({ win.width - 50.f, 30.f });
-        this->addChild(menu, 10);
-    }
-
     void onBufferMenu(CCObject*) {
         BufferMenu::open();
     }
