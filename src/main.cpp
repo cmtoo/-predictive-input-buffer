@@ -3638,6 +3638,7 @@ class $modify(BufEndLevelLayer, EndLevelLayer) {
             stats->setColor({ 255, 190, 225 });
             stats->setOpacity(170);
             stats->setAnchorPoint({ 1.f, 1.f });
+            auto win = CCDirector::get()->getWinSize();
             stats->setPosition({ win.width - 6.f, win.height - 16.f });
             this->addChild(stats, 100);
         }
