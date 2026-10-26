@@ -2479,7 +2479,6 @@ namespace {
     void endAttempt() {
         if (attemptStats.saves > 0) {
             ++sessionStats.attempts;
-            say("attempt: {}", attemptSummary());
         }
         attemptStats = {};
     }
