@@ -3619,9 +3619,18 @@ public:
     }
 };
 
-        benchFinish();  // a completed run is the best recording there is
+
+class $modify(BufEndLevelLayer, EndLevelLayer) {
+    void customSetup() {
+        EndLevelLayer::customSetup();
+        if (!buf.usedThisAttempt) {
+            return;
+        }
+
+        benchFinish();
         benchFlush();
         endAttempt();
+
     }
 };
 
