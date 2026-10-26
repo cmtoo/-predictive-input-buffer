@@ -5,9 +5,9 @@
 	},
 	"version": "v2.77.0",
 	"id": "basu.input-buffer",
-	"name": "Click Before Frames",
-	"developer": "BASU",
-	"description": "Trajectory-based input buffer: delays early clicks/releases by up to 8+ frames, with orb, pad and portal-aware prediction. github.com/raresdalas1009/-predictive-input-buffer",
+	"name": "Dynamic",
+	"developer": "cmtoo",
+	"description": "Trajectory-based input buffer: delays early clicks/releases by up to 8+ frames, with orb, pad and portal-aware prediction. OG Dynamic mod.",
 	"settings": {
 		"custom-ticks": {
 			"type": "int",
